@@ -6,7 +6,14 @@ class Form extends Component {
   state = {
     firstName: "",
     lastName: "",
-    password: ""
+    email:"",
+    password: "",
+    photo: "",
+    city: "",
+    state: "",
+    zipcode: "",
+    aboutMe: "",
+    skills: ""
   };
 
   handleInputChange = event => {
@@ -51,9 +58,6 @@ class Form extends Component {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
       <div>
-        <p>
-          Hello {this.state.firstName} {this.state.lastName}
-        </p>
         <form className="form">
           <input
             value={this.state.firstName}
@@ -70,11 +74,74 @@ class Form extends Component {
             placeholder="Last Name"
           />
           <input
+            value={this.state.email}
+            name="email"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="Email"
+          />
+          <input
             value={this.state.password}
             name="password"
             onChange={this.handleInputChange}
             type="password"
             placeholder="Password"
+          />
+          <input
+            value={this.state.photo}
+            name="photo"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="Photo"
+          />
+          <input
+            value={this.state.city}
+            name="city"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="City"
+          />
+          <input
+            value={this.state.state}
+            name="state"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="State"
+          />
+          <input
+            value={this.state.zipcode}
+            name="zipcode"
+            onChange={this.handleInputChange}
+            type="string"
+            placeholder="Zip Code"
+          />
+          <input
+            value={this.state.aboutMe}
+            name="aboutMe"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="About Me"
+          />
+          <input
+            value={this.state.skill}
+            name="skill"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="Skill"
+          />
+          <input
+            value={this.state.skill}
+            name="skill"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="Skill"
+          />
+          <input
+            value={this.state.skill}
+            name="skill"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="Skill"
           />
           <button onClick={this.handleFormSubmit}>Submit</button>
         </form>
