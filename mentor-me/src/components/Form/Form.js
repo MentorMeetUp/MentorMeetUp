@@ -41,7 +41,7 @@ class Form extends Component {
           .lastName}`
       );
     } else {
-      alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
+      alert(`Hello ${this.state.firstName} ${this.state.lastName} \nYour Location: ${this.state.city}, ${this.state.state}`);
 
       this.setState({
         firstName: "",
