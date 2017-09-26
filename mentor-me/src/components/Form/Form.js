@@ -57,7 +57,7 @@ class Form extends Component {
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
-
+      
       <div className="row">
         <div className="col-lg-3"></div>
         <div className="col-lg-6">        
