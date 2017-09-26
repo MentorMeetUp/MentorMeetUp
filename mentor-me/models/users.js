@@ -17,6 +17,7 @@ module.exports = function(sequelize, DataTypes) {
     email: {
       type: DataTypes.STRING,
       allowNull: false,
+      isEmail: true
     },
     password: {
       type: DataTypes.STRING,
@@ -27,43 +28,43 @@ module.exports = function(sequelize, DataTypes) {
     },
     photo: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: true
     },
     city: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     state: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     zip: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     aboutMe: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     skill1: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: true
     },
     skill2: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: true
     },
     skill3: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: true
     },
     skill4: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: true
     },
     skill5: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: true
     }
   });
   return Users;
