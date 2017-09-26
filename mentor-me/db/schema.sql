@@ -20,10 +20,6 @@ CREATE TABLE users (
     cost2 varchar(4) NULL, 
     skill3 varchar(50) NULL,
     cost3 varchar(4) NULL, 
-    skill4 varchar(50) NULL,
-    cost4 varchar(4) NULL, 
-    skill5 varchar(50) NULL,
-    cost5 varchar(4) NULL,
     PRIMARY KEY(id)
 );
 
