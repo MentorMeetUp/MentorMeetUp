@@ -1,6 +1,19 @@
 import React from "react";
-import Form from "./components/Form";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Form from "./pages/Form";
+import Home from "./pages/Home";
+import Results from "./pages/Results";
+// import NoMatch from "./pages/NoMatch";
 
-const App = () => <Form />;
+const App = () =>
+  <Router>
+    <div>
+      <Switch>
+        <Route exact path="/home" component={Home} />
+        <Route exact path="/form" component={Form} />
+        <Route exact path="/results" component={Results} />
+      </Switch>
+    </div>
+  </Router>;
 
 export default App;
