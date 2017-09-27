@@ -13,4 +13,9 @@
 //   .put(booksController.update)
 //   .delete(booksController.remove);
 
+//matches with "api/users/:email"
+// router
+// 	.route("/:email")
+// 	.get(usersController.findByEmail)
+
 // module.exports = router;
