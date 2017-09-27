@@ -67,7 +67,7 @@ class Login extends Component {
             type="password"
             placeholder="Password"
           />
-          <button onClick={this.handleFormSubmit}>Submit</button>
+          <button className="btn btn-primary btn-md" onClick={this.handleFormSubmit}>Submit</button>
         </form>
       </div>
     );
