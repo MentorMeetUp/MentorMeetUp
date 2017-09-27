@@ -6,23 +6,20 @@ const Navbar = () =>
     <li className={window.location.pathname === "/" ? "active" : ""}>
       <Link to="/">Home</Link>
     </li>
-    <li className={window.location.pathname === "/about" ? "active" : ""}>
-      <Link to="/about">About</Link>
-    </li>
-    <li className={window.location.pathname === "/blog" ? "active" : ""}>
-      <Link to="/blog">Blog</Link>
-    </li>
     <li className={window.location.pathname === "/form" ? "active" : ""}>
-      <Link to="/form">Form</Link>
+      <Link to="/form">Sign Up</Link>
     </li>
     <li className={window.location.pathname === "/contact" ? "active" : ""}>
       <Link to="/contact">Contact</Link>
     </li>
-    <li
+    <li className={window.location.pathname === "/contact" ? "active" : ""}>
+      <Link to="/login">Log In</Link>
+    </li>
+    {/* <li
       className={window.location.pathname === "/contact/learn" ? "active" : ""}
     >
       <Link to="/contact/learn">Learn</Link>
-    </li>
+    </li> */}
   </ul>;
 
 export default Navbar;

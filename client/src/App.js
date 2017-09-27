@@ -4,6 +4,7 @@ import Form from "./pages/Form";
 import Home from "./pages/Home";
 import Results from "./pages/Results";
 import Navbar from "./components/Navbar";
+import Login from "./pages/Login";
 // import NoMatch from "./pages/NoMatch";
 
 const App = () =>
