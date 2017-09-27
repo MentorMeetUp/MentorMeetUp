@@ -1,18 +1,17 @@
 module.exports = function(sequelize, DataTypes) {
   var Users = sequelize.define("Users", {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [1, 20]
-      }
     },
     lastName: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [1, 20]
-      }
     },
     email: {
       type: DataTypes.STRING,
@@ -23,9 +22,6 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [1, 10]
-      }
     },
     photo: {
       type: DataTypes.STRING,
@@ -70,23 +66,10 @@ module.exports = function(sequelize, DataTypes) {
     cost3: {
       type: DataTypes.STRING,
       allowNull: true
-    },
-    skill4: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    cost4: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    skill5: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    cost5: {
-      type: DataTypes.STRING,
-      allowNull: true
     }
+}, {
+      timestamps: false    
   });
-  return Users;
+
+    return Users;
 };
