@@ -57,7 +57,7 @@ class Form extends Component {
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
-
+      
       <div className="row">
         <div className="col-lg-3"></div>
         <div className="col-lg-6">        
@@ -187,9 +187,8 @@ class Form extends Component {
                 placeholder="Zip Code"
               />
               <label for="aboutMe">About Me:</label>
-              <textarea
+              <input
                 className="form-control"
-                rows="10"
                 value={this.state.aboutMe}
                 name="aboutMe"
                 onChange={this.handleInputChange}
