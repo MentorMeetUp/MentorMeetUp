@@ -46,15 +46,29 @@ class Home extends Component {
           <div className="col-lg-6"> 
             <form className="form">
             <label for="search">Search for a Skill You'd Like to Learn</label>
+              <div class="input-group">
               <input
+                className="form-control"
                 value={this.state.search}
                 name="search"
                 onChange={this.handleInputChange}
                 type="text"
                 placeholder="Search for a Skill"
               />
-              <button className="btn btn-primary btn-md" onClick={this.handleFormSubmit}>Submit</button>
+              <span>
+                <button className="btn btn-primary btn-md text-center" onClick={this.handleFormSubmit}>Submit</button>
+              </span>
+              </div>
             </form>
+
+            {/* <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Button</button>
+              </span>
+            </div>           */}
+
           </div>
         </div>
       </div>  

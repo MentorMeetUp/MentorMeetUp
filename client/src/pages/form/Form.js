@@ -33,7 +33,7 @@ class Form extends Component {
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-    if (!this.state.firstName || !this.state.lastName) {
+    if (!this.state.firstName || !this.state.lastName || !this.state.email || !this.state.city || !this.state.state || !this.state.zipcode) {
       alert("Fill out your first and last name please!");
     } else if (this.state.password.length < 6) {
       alert(
@@ -41,7 +41,13 @@ class Form extends Component {
           .lastName}`
       );
     } else {
-      alert(`Hello ${this.state.firstName} ${this.state.lastName} \nYour Location: ${this.state.city}, ${this.state.state}`);
+      alert(`Hello ${this.state.firstName} ${this.state.lastName} 
+        \nYour Location: ${this.state.city}, ${this.state.state}
+        \nYour Email: ${this.state.email}
+        \nYour password: ${this.state.password}
+        \nYour photo: ${this.state.photo}
+        \nYour About Me: ${this.state.aboutMe}
+        \nYour Skill: ${this.state.skill}`);
 
       this.setState({
         firstName: "",
@@ -57,7 +63,7 @@ class Form extends Component {
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
-
+      <div className ="panel">
       <div className="row">
         <div className="col-lg-3"></div>
         <div className="col-lg-6">        
@@ -187,14 +193,15 @@ class Form extends Component {
                 placeholder="Zip Code"
               />
               <label for="aboutMe">About Me:</label>
-              <input
+              <textarea
+                rows = "8"
                 className="form-control"
                 value={this.state.aboutMe}
                 name="aboutMe"
                 onChange={this.handleInputChange}
                 type="text"
                 placeholder="About Me"
-              />
+              ></textarea>
               <label for="skill">Skills willing to mentor:</label>
               <input
                 className="form-control"
@@ -208,6 +215,7 @@ class Form extends Component {
             </form>
         <div className="col-lg-3"></div>
         </div>
+      </div>
       </div>
     );
   }
