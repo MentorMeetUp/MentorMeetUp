@@ -66,8 +66,10 @@ class Form extends Component {
       <div className ="panel">
       <div className="row">
         <div className="col-lg-3"></div>
-        <div className="col-lg-6">        
-            <form className="form">
+
+        <div className="col-lg-6"> 
+
+            <form action="/api" method="POST" className="form">
               <label for="firstName">First Name:</label>
               <input
                 className="form-control"
@@ -211,8 +213,12 @@ class Form extends Component {
                 type="text"
                 placeholder="Skill"
               />
-              <button className="btn btn-primary btn-md" onClick={this.handleFormSubmit}>Submit</button>
+              disabled={!(this.state.author && this.state.title)}
+              <button 
+                className="btn btn-primary btn-md" 
+                onClick={this.handleFormSubmit}>Submit</button>
             </form>
+
         <div className="col-lg-3"></div>
         </div>
       </div>
