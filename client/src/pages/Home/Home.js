@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 
 class Home extends Component {
@@ -56,7 +57,8 @@ class Home extends Component {
                 placeholder="Search for a Skill"
               />
               <span>
-                <button className="btn btn-primary btn-md text-center" onClick={this.handleFormSubmit}>Submit</button>
+              <Link to="/results"><button className="btn btn-primary btn-md text-center" /*onClick={this.handleFormSubmit}*/>Submit</button></Link>
+                
               </span>
               </div>
             </form>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import Modal from "./components/Modal";
 
 const Navbar = () =>
   <ul className="nav nav-tabs">
@@ -11,10 +12,12 @@ const Navbar = () =>
     </li>
     <li className={window.location.pathname === "/contact" ? "active" : ""}>
       <Link to="/contact">Contact</Link>
-    </li>
-    <li className={window.location.pathname === "/contact" ? "active" : ""}>
+    </li>  
+    <li className={window.location.pathname === "/login" ? "active" : ""}>
       <Link to="/login">Log In</Link>
     </li>
+
+    
     {/* <li
       className={window.location.pathname === "/contact/learn" ? "active" : ""}
     >
