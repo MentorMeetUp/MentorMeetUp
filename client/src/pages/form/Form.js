@@ -71,7 +71,7 @@ class Form extends Component {
           <div className="col-lg-6"> 
 
               <form action="/api" method="POST" className="form">
-                <label for="firstName">First Name:</label>
+                <label htmlFor="firstName">First Name:</label>
                 <input
                   className="form-control"
                   value={this.state.firstName}
@@ -80,7 +80,7 @@ class Form extends Component {
                   type="text"
                   placeholder="First Name"
                 />
-                <label for="lastName">Last Name:</label>
+                <label htmlFor="lastName">Last Name:</label>
                 <input
                   className="form-control"
                   value={this.state.lastName}
@@ -89,7 +89,7 @@ class Form extends Component {
                   type="text"
                   placeholder="Last Name"
                 />
-                <label for="email">Email:</label>
+                <label htmlFor="email">Email:</label>
                 <input
                   className="form-control"
                   value={this.state.email}
@@ -98,7 +98,7 @@ class Form extends Component {
                   type="text"
                   placeholder="Email"
                 />
-                <label for="password">Password:</label>
+                <label htmlFor="password">Password:</label>
                 <input
                   className="form-control"
                   value={this.state.password}
@@ -107,7 +107,7 @@ class Form extends Component {
                   type="password"
                   placeholder="Password"
                 />
-                <label for="photo">Upload Photo:</label>
+                <label htmlFor="photo">Upload Photo:</label>
                 <input
                   className="form-control"
                   value={this.state.photo}
@@ -116,7 +116,7 @@ class Form extends Component {
                   type="text"
                   placeholder="Photo"
                 />
-                <label for="city">City:</label>
+                <label htmlFor="city">City:</label>
                 <input
                   className="form-control"
                   value={this.state.city}
@@ -125,7 +125,7 @@ class Form extends Component {
                   type="text"
                   placeholder="City"
                 />
-                <label for="state">State:</label>
+                <label htmlFor="state">State:</label>
                 <select
                   className="form-control"
                   value={this.state.state}
@@ -186,7 +186,7 @@ class Form extends Component {
                   <option>WI</option>
                   <option>WY</option>
                 </select>
-                <label for="zipcode">Zip Code:</label>
+                <label htmlFor="zipcode">Zip Code:</label>
                 <input
                   className="form-control"
                   value={this.state.zipcode}
@@ -195,7 +195,7 @@ class Form extends Component {
                   type="string"
                   placeholder="Zip Code"
                 />
-                <label for="aboutMe">About Me:</label>
+                <label htmlFor="aboutMe">About Me:</label>
                 <textarea
                   rows = "8"
                   className="form-control"
@@ -205,7 +205,7 @@ class Form extends Component {
                   type="text"
                   placeholder="About Me"
                 ></textarea>
-                <label for="skill">Skills willing to mentor:</label>
+                <label htmlFor="skill">Skills willing to mentor:</label>
                 <input
                   className="form-control"
                   value={this.state.skill}

@@ -29,7 +29,7 @@ class Home extends Component {
     if (!this.state.skill) {
       alert("Please enter a skill you'd like to search for");
     } else {
-      alert(`You searched for: ${this.state.skill}`);
+      // alert(`You searched for: ${this.state.skill}`);
 
       this.setState({
         skill: ""
@@ -60,7 +60,7 @@ class Home extends Component {
                     type="text"
                     placeholder="Search for a Skill"
                   />
-                    <Link to="/results"><button className="btn btn-primary btn-md" /*onClick={this.handleFormSubmit}*/>Submit</button></Link>
+                    <Link to="/results"><button className="btn btn-primary btn-md" onClick={this.handleFormSubmit}>Submit</button></Link>
               </form>
 
               {/* <div class="input-group">
