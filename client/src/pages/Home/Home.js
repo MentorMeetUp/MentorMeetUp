@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-// import API from "../../utils/API";
+import API from "../../utils/API";
 
 class Home extends Component {
   // Setting the component's initial state
@@ -22,6 +22,10 @@ class Home extends Component {
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
+
+    API.getUserSkill(this.state.skill)
+      .then(res => console.log(res.data))
+
     if (!this.state.skill) {
       alert("Please enter a skill you'd like to search for");
     } else {
