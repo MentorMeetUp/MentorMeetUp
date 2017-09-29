@@ -13,9 +13,36 @@ module.exports = {
 	},
 	findAll: function(req, res) {
 		db.Users.findAll({
-	      	where: {
-	      		skill1: req.params.skill
-	      	}
+	      	// where: {$or[
+	      	// 	skill1: req.params.skill,
+	      	// 	skill2: req.params.skill,
+	      	// 	skill3: req.params.skill
+	      	// ]}
+
+			where: {
+			    $or: [
+			        {
+			            skill1: 
+			            {
+			                $eq: req.params.skill
+			            }
+			        }, 
+			        {
+			            skill2: 
+			            {
+			                $eq: req.params.skill
+			            }
+			        }, 
+			        {
+			            skill3: 
+			            {
+			                $eq: req.params.skill
+			            }
+			        }
+			    ]
+			}
+
+
 	      })
 	      .then(dbModel => res.json(dbModel))
 	      .catch(err => res.status(422).json(err));
