@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
+import API from "../../utils/API";
 
 class Home extends Component {
   // Setting the component's initial state
   state = {
-    search: ""
+    skill: ""
   };
 
   handleInputChange = event => {
@@ -22,13 +22,13 @@ class Home extends Component {
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-    if (!this.state.search) {
+    if (!this.state.skill) {
       alert("Please enter a skill you'd like to search for");
     } else {
-      alert(`You searched for: ${this.state.search}`);
+      alert(`You searched for: ${this.state.skill}`);
 
       this.setState({
-        search: ""
+        skill: ""
         
       });
     }
@@ -46,12 +46,12 @@ class Home extends Component {
           <div className="col-lg-3"></div>
           <div className="col-lg-6"> 
             <form className="form">
-            <label for="search">Search for a Skill You'd Like to Learn</label>
+            <label for="skill">Search for a Skill You'd Like to Learn</label>
               <div class="input-group">
               <input
                 className="form-control"
-                value={this.state.search}
-                name="search"
+                value={this.state.skill}
+                name="skill"
                 onChange={this.handleInputChange}
                 type="text"
                 placeholder="Search for a Skill"
