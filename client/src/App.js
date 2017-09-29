@@ -3,21 +3,25 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Form from "./pages/Form";
 import Home from "./pages/Home";
 import Results from "./pages/Results";
-import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
+import Navbar from "./components/Navbar";
+// import Wrapper from "./components/Wrapper";
+
 // import NoMatch from "./pages/NoMatch";
 
 const App = () =>
   <Router>
     <div>
       <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/home" component={Home} />
-        <Route exact path="/form" component={Form} />
-        <Route exact path="/results" component={Results} />
-        <Route exact path="/login" component={Login} />
-      </Switch>
+      {/* <Wrapper> */}
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/form" component={Form} />
+          <Route exact path="/results" component={Results} />
+          <Route exact path="/login" component={Login} />
+        </Switch>
+      {/* </Wrapper> */}
     </div>
   </Router>;
 

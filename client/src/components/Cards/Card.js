@@ -18,6 +18,9 @@ const UserCard = props => (
           <strong>Location:</strong> {props.location}
         </li>
       </ul>
+    </div>
+  </div>
+    
 );
 
 export default UserCard;
