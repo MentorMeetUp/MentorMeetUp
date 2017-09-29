@@ -7,14 +7,14 @@ const usersController = require("../../controllers/usersController");
 
 // Matches with "/api/users/:skill"
 router
-  .route("/search/:skill")
+  .route("/:skill")
   .get(usersController.findAll)
   // .put(usersController.update)
 
 
 // matches with "api/users/:email"
 router
-	.route("/:email")
+	.route("/signIn/:email")
 	.get(usersController.findByEmail)
 
 module.exports = router;
