@@ -4,7 +4,7 @@ import "./Results.css";
 
 const Results = () =>
 
-<div>
+<div className="container">
     <h1>Results Page</h1>
     <span class="whiteText">MentorMe</span><span class="redText">etUp</span>
 </div>                  

@@ -38,7 +38,7 @@ class Home extends Component {
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
-      <div>
+      <div className="container">
         <h1>
           Home Page
         </h1>
@@ -47,7 +47,6 @@ class Home extends Component {
           <div className="col-lg-6"> 
             <form className="form">
             <label htmlFor="skill">Search for a Skill You'd Like to Learn</label>
-              <div className="input-group">
                 <input
                   className="form-control"
                   value={this.state.skill}
@@ -56,10 +55,7 @@ class Home extends Component {
                   type="text"
                   placeholder="Search for a Skill"
                 />
-                <span>
-                  <Link to="/results"><button className="btn btn-primary btn-md text-center" /*onClick={this.handleFormSubmit}*/>Submit</button></Link>
-                </span>
-              </div>
+                  <Link to="/results"><button className="btn btn-primary btn-md" /*onClick={this.handleFormSubmit}*/>Submit</button></Link>
             </form>
 
             {/* <div class="input-group">
