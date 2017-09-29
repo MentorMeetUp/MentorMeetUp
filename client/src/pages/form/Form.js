@@ -213,7 +213,6 @@ class Form extends Component {
                 type="text"
                 placeholder="Skill"
               />
-              disabled={!(this.state.author && this.state.title)}
               <button 
                 className="btn btn-primary btn-md" 
                 onClick={this.handleFormSubmit}>Submit</button>
