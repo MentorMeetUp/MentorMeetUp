@@ -134,7 +134,7 @@ class Form extends Component {
                   type="state"
                   placeholder="State"
                 >
-                  <option value="" selected disabled>Please select:</option>
+                  <option defaultValue="" selected disabled>Please select:</option>
                   <option>AL</option>
                   <option>AK</option>
                   <option>AZ</option>
