@@ -42,30 +42,32 @@ class Home extends Component {
         <h1>
           Home Page
         </h1>
-        <div className="row">
-          <div className="col-lg-3"></div>
-          <div className="col-lg-6"> 
-            <form className="form">
-            <label htmlFor="skill">Search for a Skill You'd Like to Learn</label>
-                <input
-                  className="form-control"
-                  value={this.state.skill}
-                  name="skill"
-                  onChange={this.handleInputChange}
-                  type="text"
-                  placeholder="Search for a Skill"
-                />
-                  <Link to="/results"><button className="btn btn-primary btn-md" /*onClick={this.handleFormSubmit}*/>Submit</button></Link>
-            </form>
+        <div className="panel">
+          <div className="row">
+            <div className="col-lg-3"></div>
+            <div className="col-lg-6"> 
+              <form className="form">
+              <label htmlFor="skill">Search for a Skill You'd Like to Learn</label>
+                  <input
+                    className="form-control"
+                    value={this.state.skill}
+                    name="skill"
+                    onChange={this.handleInputChange}
+                    type="text"
+                    placeholder="Search for a Skill"
+                  />
+                    <Link to="/results"><button className="btn btn-primary btn-md" /*onClick={this.handleFormSubmit}*/>Submit</button></Link>
+              </form>
 
-            {/* <div class="input-group">
-              <span class="input-group-addon">$</span>
-              <input type="text" class="form-control">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Button</button>
-              </span>
-            </div>           */}
+              {/* <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Button</button>
+                </span>
+              </div>           */}
 
+            </div>
           </div>
         </div>
       </div>  
