@@ -3,10 +3,10 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 var bodyParser = require("body-parser");
-
+const routes = require("./routes");
 // Requiring our models for syncing
 var db = require("./models");
-
+app.use(routes);
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -19,13 +19,13 @@ app.use(bodyParser.text());
 
 // Routes
 // =============================================================
-require("./routes/api/users.js"); // TO DO add (app) back in
+// require("./routes/api/books.js"); // TO DO add (app) back in
 
 // Send every request to the React app
 // Define any API routes before this runs
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*", function(req, res) {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
