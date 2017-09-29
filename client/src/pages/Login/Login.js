@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import API from "../../utils/API";
+// import { Link } from "react-router-dom";
 
 
 class Login extends Component {
@@ -25,6 +27,10 @@ class Login extends Component {
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
+
+    API.signIn(this.state.email)
+      .then(res => console.log(res.data))
+
     if (!this.state.email || !this.state.password) {
       alert("Please fill out all fields");
     } else if (this.state.password.length < 6) {
@@ -35,8 +41,8 @@ class Login extends Component {
       // alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
 
       this.setState({
-        email: "",
-        password: ""
+        email: this.state.email,
+        password: "qwerty"
       });
     }
 
@@ -45,12 +51,26 @@ class Login extends Component {
     // });
   };
 
+  // getEmail = user => {
+  //   API.signIn(user)
+  //     .then(res => console.log(res.data))
+  //     if (this.state.email===user.email) {
+  //      <Link to={'results/${this.state.email}'} className="btn btn-default">
+  //     Sign In!
+  //   </Link>
+  //     }
+  //     else {
+  //       alert("WRONG!!")
+  //     }
+  //     // .catch(err => console.log(err));
+  // };
+
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
       <div>
         <p>
-          Welcome. Sign in!
+          Welcome.  Sign in! {this.state.email}
         </p>
         <form className="form">
           <input
