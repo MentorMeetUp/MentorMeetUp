@@ -7,7 +7,7 @@ const usersController = require("../../controllers/usersController");
 
 // Matches with "/api/users/:skill"
 router
-  .route("/:skill")
+  .route("/search/:skill")
   .get(usersController.findAll)
   // .put(usersController.update)
 
