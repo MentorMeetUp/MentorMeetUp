@@ -14,7 +14,7 @@ module.exports = {
 	findAll: function(req, res) {
 		db.Users.findAll({
 	      	// where: {$or[
-	      	// 	skill1: req.params.skill,
+	      	// 	skill1: req.params.skill, 
 	      	// 	skill2: req.params.skill,
 	      	// 	skill3: req.params.skill
 	      	// ]}

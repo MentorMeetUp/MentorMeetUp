@@ -5,9 +5,8 @@ import Home from "./pages/Home";
 import Results from "./pages/Results";
 import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
+import NoMatch from "./pages/NoMatch";
 // import Wrapper from "./components/Wrapper";
-
-// import NoMatch from "./pages/NoMatch";
 
 const App = () =>
   <Router>
@@ -20,6 +19,7 @@ const App = () =>
           <Route exact path="/form" component={Form} />
           <Route exact path="/results/:skill" component={Results} />
           <Route exact path="/login" component={Login} />
+          <Route component={NoMatch} />
         </Switch>
       {/* </Wrapper> */}
     </div>
