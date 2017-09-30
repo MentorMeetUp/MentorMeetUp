@@ -7,7 +7,7 @@ const Navbar = () =>
   <div className="container-fluid">
     <div className="navbar-header">
       <Link className="navbar-brand" to="/">
-        <strong>MentorMe</strong>etUp
+        <strong>MentorMe</strong>
       </Link>
     </div>
     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
