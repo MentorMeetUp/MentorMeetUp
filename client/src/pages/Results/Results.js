@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 import "./Results.css";
 import API from "../../utils/API";
-// import Card from "../../components/Card";
+import Card from "../../components/Card";
 
 class Results extends Component {
   state = {
@@ -25,15 +25,18 @@ class Results extends Component {
               {this.state.skill.length ? (
                 <div>
                 {this.state.skill.map(result => (
-                  <div>               
-                      <strong>
-                        {result.city} by {result.email}
-                      </strong>
-                  </div>
+                  <Card
+                    firstName={result.firstName}
+                    lastName={result.lastName}
+                    photo={result.photo}
+                    city={result.city}
+                    state={result.state}
+                    skill={result.skill1} 
+                  />
                 ))}
                 </div>
             ) : (
-              <h3>No Results to Display</h3>
+              <h3>No mentors for that skill yet!</h3>
             )}
 			</div>                  
 		);
