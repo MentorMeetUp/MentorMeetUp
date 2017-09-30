@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 // import Modal from "./components/Modal";
 
-<<<<<<< HEAD
 class Navbar extends Component {
   // Setting the component's initial state
   state = {
@@ -44,22 +43,8 @@ class Navbar extends Component {
         <div className="container-fluid">
           <div className="navbar-header">
             <Link className="navbar-brand" to="/">
-              <strong>MentorMeetUp</strong>
+              <strong>Mentor MeetUp</strong>
             </Link>
-=======
-const Navbar = () =>
-<nav className="navbar navbar-default">
-  <div className="container-fluid">
-    <div className="navbar-header">
-      <Link className="navbar-brand" to="/">
-        <strong>Mentor Me</strong>
-      </Link>
-    </div>
-    <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <form action="/results" method="post" name="search" className="navbar-form navbar-left" role="search">
-          <div className="form-group">
-            <input type="text" className="form-control" id="search-navbar" placeholder="Search" name="Artist"/>
->>>>>>> 49834f53169a11ecb2351d73949e5ee9c5ff3b62
           </div>
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
