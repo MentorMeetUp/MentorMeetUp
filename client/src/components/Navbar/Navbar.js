@@ -43,7 +43,7 @@ class Navbar extends Component {
         <div className="container-fluid">
           <div className="navbar-header">
             <Link className="navbar-brand" to="/">
-              <strong>Mentor MeetUp</strong>
+              <strong>Mentor Me</strong>
             </Link>
           </div>
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
