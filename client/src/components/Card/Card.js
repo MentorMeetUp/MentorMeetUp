@@ -1,16 +1,16 @@
 import React from "react";
-import {Grid} from "react-bootstrap";
-import {Row} from "react-bootstrap";
-import {Col} from "react-bootstrap";
+// import {Grid} from "react-bootstrap";
+// import {Row} from "react-bootstrap";
+// import {Col} from "react-bootstrap";
 import {Thumbnail} from "react-bootstrap";
 import {Button} from "react-bootstrap";
 
 
 
 const Card = props => (
-  <Grid>
-    <Row>
-    <Col xs={6} md={4} lg={3}>
+  // <Grid>
+  //   <Row>
+  //   <Col xs={6} md={4} lg={3}>
       <Thumbnail src={props.photo} alt="User Photo">
       <ul>
         <li>
@@ -24,12 +24,12 @@ const Card = props => (
         </li>
       </ul>
         <p>
-          <Button bsStyle="primary" bsSize="xsmall">free</Button>   <Button bsStyle="primary" bsSize="xsmall">Button</Button>
+          {/* <Button bsStyle="primary" bsSize="xsmall">free</Button>*/}   <Button bsStyle="primary" bsSize="xsmall">Contact</Button>
         </p>
       </Thumbnail>
-    </Col>
-    </Row>
-  </Grid>
+  //   </Col>
+  //   </Row>
+  // </Grid>
 );
 
 
