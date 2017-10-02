@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "Bobasaur6^",
     "database": "mentorme_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "",
-    "database": "mentorme_db",
-    "host": "127.0.0.1",
+    "username": "e57xcf2mycukpfkw",
+    "password": "lpuxzo2x81arz394",
+    "database": "k07fsyjs7fm0hfoz",
+    "host": "rtzsaka6vivj2zp1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/",
     "dialect": "mysql"
   }
 }
