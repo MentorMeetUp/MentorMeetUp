@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import "./Results.css";
 import API from "../../utils/API";
 import Card from "../../components/Card";
-import {Grid} from "react-bootstrap";
+// import {Grid} from "react-bootstrap";
 import {Row} from "react-bootstrap";
 import {Col} from "react-bootstrap";
 
@@ -25,7 +25,7 @@ class Results extends Component {
   	render() {
 	    return (
 			<div className="container">
-          <Grid>
+          {/* <Grid> */}
             <Row>
               <Col xs={6} md={4} lg={3}>
               {this.state.skill.length ? (
@@ -47,7 +47,7 @@ class Results extends Component {
             )}
             </Col>
           </Row>
-        </Grid>
+        {/* </Grid> */}
 			</div>                  
 		);
 	}
