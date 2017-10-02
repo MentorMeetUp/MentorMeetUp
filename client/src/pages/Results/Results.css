@@ -1,14 +1,7 @@
 
-.whiteText { 
-	color:white;
-	font-weight:bold;
-	font-family:Eras Medium ITC;
-	font-size:20
-}
-
-.redText { 
-	color:red;
-	font-weight:bold;
-	font-family:Eras Medium ITC;
-	font-size:20 
+.container {
+	display: block;
+	float: left;
+	margin-bottom: 5px;
+	height: calc(35%);
 }
