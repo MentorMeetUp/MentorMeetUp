@@ -26,6 +26,7 @@ class Results extends Component {
                 <div>
                 {this.state.skill.map(result => (
                   <Card
+                    key={result.id}
                     firstName={result.firstName}
                     lastName={result.lastName}
                     photo={result.photo}
