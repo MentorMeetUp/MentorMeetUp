@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-<<<<<<< HEAD
 import "./Login.css";
 
 // import { Link } from "react-router-dom";
-=======
-import { Link } from "react-router-dom";
->>>>>>> ca9dc7a3fbd47c5153f57e2848336a7adb649a94
 
 
 class Login extends Component {
@@ -85,7 +81,6 @@ class Login extends Component {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
       <div className="container">
-<<<<<<< HEAD
         <div className ="panel">
         <div className="row">
           <div className="col-lg-3"></div>
@@ -117,30 +112,6 @@ class Login extends Component {
           </div>
         </div>
         </div>
-=======
-        <p>
-          Welcome.  Sign in! {this.state.email}
-        </p>
-        <form className="form">
-          <input
-            value={this.state.email}
-            name="email"
-            onChange={this.handleInputChange}
-            type="text"
-            placeholder="Email"
-          />
-          <input
-            value={this.state.password}
-            name="password"
-            onChange={this.handleInputChange}
-            type="password"
-            placeholder="Password"
-          />
-        
-          <button className="btn btn-primary btn-md" onClick={this.handleFormSubmit}>Submit</button>
-
-        </form>
->>>>>>> ca9dc7a3fbd47c5153f57e2848336a7adb649a94
       </div>
     );
   }
