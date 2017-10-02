@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+import "./Login.css";
+
 // import { Link } from "react-router-dom";
 
 
@@ -69,26 +71,37 @@ class Login extends Component {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
       <div className="container">
-        <p>
-          Welcome.  Sign in! {this.state.email}
-        </p>
-        <form className="form">
-          <input
-            value={this.state.email}
-            name="email"
-            onChange={this.handleInputChange}
-            type="text"
-            placeholder="Email"
-          />
-          <input
-            value={this.state.password}
-            name="password"
-            onChange={this.handleInputChange}
-            type="password"
-            placeholder="Password"
-          />
-          <button className="btn btn-primary btn-md" onClick={this.handleFormSubmit}>Submit</button>
-        </form>
+        <div className ="panel">
+        <div className="row">
+          <div className="col-lg-3"></div>
+          <div className="col-lg-6">         
+            <h1>
+              Log-In!
+            </h1>
+            <form className="form">
+              <label htmlFor="email">E-mail:</label>
+              <input
+                className="form-control"
+                value={this.state.email}
+                name="email"
+                onChange={this.handleInputChange}
+                type="text"
+                placeholder="Email"
+              />
+              <label htmlFor="password">Password:</label>
+              <input
+                className="form-control"
+                value={this.state.password}
+                name="password"
+                onChange={this.handleInputChange}
+                type="password"
+                placeholder="Password"
+              />
+              <button className="btn btn-primary btn-md" onClick={this.handleFormSubmit}>Submit</button>
+            </form>
+          </div>
+        </div>
+        </div>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { Jumbotron } from "react-bootstrap";
 
 class Home extends Component {
   // Setting the component's initial state
@@ -25,7 +26,6 @@ class Home extends Component {
     if (!this.state.skill) {
       alert("Please enter a skill you'd like to search for");
     } else {
-      alert(`You searched for: ${this.state.skill}`);
 
       this.setState({
         skill: ""
@@ -38,10 +38,17 @@ class Home extends Component {
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
-      <div className="container">
-        <h1>
-          Home Page
+    <div>
+      <Jumbotron>
+        <h1 className="text-center">
+          Mentor MeetUp
         </h1>
+        <h3 className="text-center">
+          Find 1-on-1 Instructors, Tutors & Mentors
+        </h3>
+      </Jumbotron>
+
+      <div className="container">
         <div className="panel">
           <div className="row">
             <div className="col-lg-3"></div>
@@ -70,7 +77,8 @@ class Home extends Component {
             </div>
           </div>
         </div>
-      </div>  
+      </div>
+    </div>  
     );
   }
 }

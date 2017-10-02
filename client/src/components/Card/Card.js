@@ -10,7 +10,7 @@ import {Button} from "react-bootstrap";
 const Card = props => (
   <Grid>
     <Row>
-    <Col xs={6} md={4}>
+    <Col xs={6} md={4} lg={3}>
       <Thumbnail src={props.photo} alt="User Photo">
       <ul>
         <li>
