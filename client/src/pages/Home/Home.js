@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Jumbotron } from "react-bootstrap";
+import Footer from "../../components/Footer";
+
 
 class Home extends Component {
   // Setting the component's initial state
@@ -41,7 +43,7 @@ class Home extends Component {
     <div>
       <Jumbotron>
         <h1 className="text-center">
-          Mentor MeetUp
+          Mentor Me
         </h1>
         <h3 className="text-center">
           Find 1-on-1 Instructors, Tutors & Mentors
@@ -66,10 +68,10 @@ class Home extends Component {
                     <Link to={`/results/${this.state.skill}`}><button className="btn btn-primary btn-md" /*onClick={this.handleFormSubmit}*/>Submit</button></Link>
               </form>
 
-              {/* <div class="input-group">
-                <span class="input-group-addon">$</span>
+              {/* <div className="input-group">
+                <span className="input-group-addon">$</span>
                 <input type="text" class="form-control">
-                <span class="input-group-btn">
+                <span className="input-group-btn">
                   <button class="btn btn-default" type="button">Button</button>
                 </span>
               </div>           */}
@@ -77,7 +79,8 @@ class Home extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </div>      
+    <Footer />
     </div>  
     );
   }

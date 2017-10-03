@@ -6,11 +6,8 @@ import {Thumbnail} from "react-bootstrap";
 import {Button} from "react-bootstrap";
 
 
-
 const Card = props => (
-  // <Grid>
-  //   <Row>
-  //   <Col xs={6} md={4} lg={3}>
+  <div>
       <Thumbnail src={props.photo} alt="User Photo">
       <ul>
         <li>
@@ -22,40 +19,18 @@ const Card = props => (
         <li>
           <strong>Location:</strong> {props.city}, {props.state}
         </li>
+        <li>
+          <strong>Cost:</strong> {props.cost1}
+        </li><br></br>
+        <li>
+          <strong>About Me:</strong> {props.aboutMe}. 
+        </li>
       </ul>
-        <p>
-          {/* <Button bsStyle="primary" bsSize="xsmall">free</Button>*/}   <Button bsStyle="primary" bsSize="xsmall">Contact</Button>
-        </p>
+      <p>
+        <Button bsStyle="primary" bsSize="xsmall"><span className="glyphicon glyphicon-envelope"></span> {props.email}</Button>  
+      </p>
       </Thumbnail>
-  //   </Col>
-  //   </Row>
-  // </Grid>
+  </div>
 );
-
-
-
-
-
-// const UserCard = props => (
-//   <div className="card">
-//     <div className="img-container">
-//       <img alt={props.name} src={props.image} />
-//     </div>
-//     <div className="content">
-//       <ul>
-//         <li>
-//           <h4>Name:</h4> {props.name}
-//         </li>
-//         <li>
-//           <strong>Occupation:</strong> {props.occupation}
-//         </li>
-//         <li>
-//           <strong>Location:</strong> {props.location}
-//         </li>
-//       </ul>
-//     </div>
-//   </div>
-    
-// );
 
 export default Card;

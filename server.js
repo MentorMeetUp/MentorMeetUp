@@ -19,13 +19,8 @@ app.use(bodyParser.text());
 
 // Routes
 // =============================================================
-// require("./routes/api/books.js"); // TO DO add (app) back in
+// require("./routes/api/users.js")(app);
 
-// Send every request to the React app
-// Define any API routes before this runs
-// app.get("*", function(req, res) {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================

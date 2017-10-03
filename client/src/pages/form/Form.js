@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./Form.css";
+import Footer from "../../components/Footer";
+
 
 class Form extends Component {
   // Setting the component's initial state
@@ -223,6 +225,7 @@ class Form extends Component {
           </div>
         </div>
         </div>
+       <Footer />
       </div>
     );
   }
