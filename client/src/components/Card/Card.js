@@ -27,7 +27,7 @@ const Card = props => (
         </li>
       </ul>
       <p>
-        <Button bsStyle="primary" bsSize="xsmall"><span className="glyphicon glyphicon-envelope"></span> {props.email}</Button>  
+        <Button bsStyle="primary" bsSize="xsmall"><span className="glyphicon glyphicon-envelope">&nbsp;</span>{props.email}</Button>  
       </p>
       </Thumbnail>
   </div>

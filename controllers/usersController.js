@@ -13,12 +13,6 @@ module.exports = {
 	},
 	findAll: function(req, res) {
 		db.Users.findAll({
-	      	// where: {$or[
-	      	// 	skill1: req.params.skill, 
-	      	// 	skill2: req.params.skill,
-	      	// 	skill3: req.params.skill
-	      	// ]}
-
 			where: {
 			    $or: [
 			        {
@@ -46,5 +40,11 @@ module.exports = {
 	      })
 	      .then(dbModel => res.json(dbModel))
 	      .catch(err => res.status(422).json(err));
-	}
+	},
+	create: function(req, res) {
+    db.Users
+      .create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => console.log(err));
+  },
 };

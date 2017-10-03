@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Form.css";
 import Footer from "../../components/Footer";
+import API from "../../utils/API";
 
 
 class Form extends Component {
@@ -15,7 +16,7 @@ class Form extends Component {
     state: "",
     zipcode: "",
     aboutMe: "",
-    skills: ""
+    skill1: ""
   };
 
   handleInputChange = event => {
@@ -36,30 +37,29 @@ class Form extends Component {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
     if (!this.state.firstName || !this.state.lastName || !this.state.email || !this.state.city || !this.state.state || !this.state.zipcode) {
-      alert("Fill out your first and last name please!");
+      alert("Please fill out all of the required fields");
     } else if (this.state.password.length < 6) {
       alert(
         `Choose a more secure password ${this.state.firstName} ${this.state
           .lastName}`
       );
     } else {
-      alert(`Hello ${this.state.firstName} ${this.state.lastName} 
-        \nYour Location: ${this.state.city}, ${this.state.state}
-        \nYour Email: ${this.state.email}
-        \nYour password: ${this.state.password}
-        \nYour photo: ${this.state.photo}
-        \nYour About Me: ${this.state.aboutMe}
-        \nYour Skill: ${this.state.skill}`);
-
-      this.setState({
-        firstName: "",
-        lastName: ""
-      });
+      API.saveUser({
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        email: this.state.email,
+        password: this.state.password,
+        photo: this.state.photo,
+        city: this.state.city,
+        state: this.state.state,
+        zipcode: this.state.zipcode,
+        aboutMe: this.state.aboutMe,
+        skill1: this.state.skill1      
+      })
+        .then(res => res.json(res))
+          // this.setState({ users: res.data, firstName: "", lastName: "", email: "", password: "", photo: "", city: "", state: "", zipcode: "", aboutMe: "", skill1: ""}))
+        .catch(err => console.log(err));
     }
-
-    this.setState({
-      password: ""
-    });
   };
 
   render() {
@@ -72,7 +72,7 @@ class Form extends Component {
 
           <div className="col-lg-6"> 
 
-              <form action="/api" method="POST" className="form">
+              <form>
                 <label htmlFor="firstName">First Name:</label>
                 <input
                   className="form-control"
@@ -207,11 +207,11 @@ class Form extends Component {
                   type="text"
                   placeholder="About Me"
                 ></textarea>
-                <label htmlFor="skill">Skills willing to mentor:</label>
+                <label htmlFor="skill1">Skills willing to mentor:</label>
                 <input
                   className="form-control"
-                  value={this.state.skill}
-                  name="skill"
+                  value={this.state.skill1}
+                  name="skill1"
                   onChange={this.handleInputChange}
                   type="text"
                   placeholder="Skill"
